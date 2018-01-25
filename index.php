@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="css/skillstack.css">
 </head>
 <body>
+<i class="fa fa-cog fa-spin"></i>
 <?php 
 echo "moro"; 
 echo "test";
