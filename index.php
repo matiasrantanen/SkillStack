@@ -2,8 +2,8 @@
 
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/css/skillstack.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/skillstack.css">
 </head>
 <body>
 <?php 
