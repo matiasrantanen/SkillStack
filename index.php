@@ -2,6 +2,7 @@
 
 <html lang="en">
 <head>
+<script defer src="js/fontawesome-all.js"></script>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/skillstack.css">
 </head>
