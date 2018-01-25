@@ -1,1 +1,1 @@
-<? echo "moro" ?>
+<? echo "moro"; ?>
