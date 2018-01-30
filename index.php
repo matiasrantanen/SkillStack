@@ -42,10 +42,7 @@
   <!-- Profile information -->
     <div class="col-md-8" id="profileinfo">
       <h3> Name </h3>
-      <p> Something </p>
-      <p> Something </p>
-      <p> Something </p>
-      <p> Something </p>
+      <p> Write something about yourself! </p>
     </div>
   </div>
 </div>
