@@ -1,3 +1,27 @@
 body {
-    background-color: black;
+    background-color: white;
+}
+
+#cont1 {
+    margin: 80px 80px 0px 80px;
+}
+
+#cont2 {
+    margin: 50px 80px 0px 80px;
+}
+
+#cont3 {
+    margin: 50px 80px 0px 80px;
+}
+
+#p1 {
+    margin: 0px 0px 0px 0px;
+}
+
+#p2 {
+    margin: 20px 0px 0px 0px;
+}
+
+#p3 {
+    margin: 20px 0px 0px 0px;
 }

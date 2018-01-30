@@ -33,15 +33,59 @@
     </form>
   </div>
 </nav>
-<div class="container">
-<i class="fa fa-cog fa-spin"></i>
-<?php 
-echo "moro"; 
-echo "test";
-echo "test";
-echo "moo";
-echo "j";
-?>
+<div class="container" id="cont1">
+  <div class="row">
+  <!-- Profile picture -->
+    <div class="col-md-4" id="profilepicture">
+     <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
+    </div>
+  <!-- Profile information -->
+    <div class="col-md-8" id="profileinfo">
+      <h3> Name </h3>
+      <p> Something </p>
+      <p> Something </p>
+      <p> Something </p>
+      <p> Something </p>
+    </div>
+  </div>
+</div>
+<div class="container" id="cont2">
+  <h2> Progress </h2>
+  <div class="row" id="p1">
+    <div class="col">
+      <div class="progress" style="height: 20px;">
+         <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="p2">
+    <div class="col">
+      <div class="progress" style="height: 20px;">
+         <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="p3">
+    <div class="col">
+      <div class="progress" style="height: 20px;">
+         <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" id="cont3">
+  <h2> Projects </h2>
+  <div class="row">
+    <div class="col-md-4">
+    <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
+    </div>
+    <div class="col-md-4">
+    <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
+    </div>
+    <div class="col-md-4">
+    <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
+    </div>
+  </div>
 </div>
 </body>
 </html>
