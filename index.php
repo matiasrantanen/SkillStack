@@ -39,11 +39,11 @@
 <div class="container" id="cont1">
   <div class="row">
   <!-- Profile picture -->
-    <div class="col-md-4" id="profilepicture">
+    <div class="col-4" id="profilepicture">
      <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
     </div>
   <!-- Profile information -->
-    <div class="col-md-8" id="profileinfo">
+    <div class="col-8" id="profileinfo">
       <h3> Name </h3>
       <p> Write something about yourself! </p>
     </div>
@@ -76,13 +76,13 @@
 <div class="container" id="cont3">
   <h2> Projects </h2>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-4">
     <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
     </div>
-    <div class="col-md-4">
+    <div class="col-4">
     <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
     </div>
-    <div class="col-md-4">
+    <div class="col-4">
     <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
     </div>
   </div>
