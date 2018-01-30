@@ -85,23 +85,31 @@
   </div>
 </div>
 <div class="container" id="cont4">
-  <div class="row text-center">
-  <h4><a class="anchor" id ="contact"></a>CONTACT</h4>
-      <ul class="list-unstyled list-inline">
-        <li>
+  
+  <h2>Contact</h2>
+
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
           <a href="#" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
         </li>
-        <li><a href="#" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+        <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
         </li>
-         <li>
-          <a href="#" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+         <li class="list-inline-item">
+          <a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a>
         </li>
-        <li>
-          <a href="#" target="_blank"><i class="fa fa-codepen fa-2x"></i></a>
+        <li class="list-inline-item">
+          <a href="#" target="_blank"><i class="fab fa-codepen fa-2x"></i></a>
         </li>
       </ul>
 </div>
 </div>
+<footer class="footer">
+  <div class="container" id="foot">
+    <div class="row" id=copy>
+      <p id="copy"><i class="far fa-copyright"></i>SkillStack</p>
+</div>
+</div>
+</footer>
     
 </body>
 </html>
