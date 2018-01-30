@@ -47,7 +47,7 @@
   </div>
 </div>
 <div class="container" id="cont2">
-  <h2> Progress </h2>
+  <h2> Skills </h2>
   <div class="row" id="p1">
     <div class="col">
       <div class="progress" style="height: 20px;">
@@ -84,5 +84,8 @@
     </div>
   </div>
 </div>
+<div class="container" id="cont4">
+  <div class="row">
+    
 </body>
 </html>
