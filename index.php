@@ -85,7 +85,23 @@
   </div>
 </div>
 <div class="container" id="cont4">
-  <div class="row">
+  <div class="row text-center">
+  <h4><a class="anchor" id ="contact"></a>CONTACT</h4>
+      <ul class="list-unstyled list-inline">
+        <li>
+          <a href="#" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
+        </li>
+        <li><a href="#" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+        </li>
+         <li>
+          <a href="#" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+        </li>
+        <li>
+          <a href="#" target="_blank"><i class="fa fa-codepen fa-2x"></i></a>
+        </li>
+      </ul>
+</div>
+</div>
     
 </body>
 </html>
