@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
         body{ font: 14px sans-serif; background-color: #0275d8;}
-        .wrapper{ width: 350px; padding: 20px; margin: auto; margin-top: 10%; border: 2px solid white; border-radius: 10px; background-color: white; }
+        .wrapper{ width: 350px; padding: 20px; margin: auto; border: 2px solid white; border-radius: 10px; background-color: white; margin-top: 8%; margin-bottom: 8%; }
     </style>
     <script defer src="js/fontawesome-all.js"></script>
 </head>
