@@ -1,4 +1,9 @@
 <?php
+Session_start();
+$cookie_name = "user";
+$cookie_value = "skillstack";
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+
 // Include config file
 require_once 'config.php';
 

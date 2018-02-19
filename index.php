@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-
+<?php
+Session_start();
+?>
 <html lang="en">
 <head>
 <script defer src="js/fontawesome-all.js"></script>
