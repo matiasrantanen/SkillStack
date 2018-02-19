@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <?php
 Session_start();
-if (!isset($_SESSION['userid'])){
-  if(isset($_COOKIE['userid'])){
+
+if (isset($_COOKIE['userid'])){
+    
   $_SESSION['userid'] = $_COOKIE['userid'];
-  
-  }}
+  }
+  else  {
+    header("location: login.php");
+    exit;
+  }
 ?>
 <html lang="en">
 <head>
