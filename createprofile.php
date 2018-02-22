@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 //get input from user and insert into table
   $name = $_POST['firstname'];
   $description = $_POST['aboutme'];
-  $sqli = "INSERT INTO profiles (name,description) VALUES ('$name','$description')";
+  $sqli = "INSERT INTO users (name,description) VALUES ('$name','$description') WHERE username = $username";
   if(mysqli_query($link, $sqli)){
     echo "Table created successfully.";
 } else{
