@@ -2,6 +2,7 @@
 Session_start();
 setcookie('userid', 'skillstack', time() + (86400 * 30), "/");
 
+
 // Include config file
 require_once 'config.php';
 
@@ -53,7 +54,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             save the username to the session */
                             session_start();
                             $_SESSION['username'] = $username;
-                            header("location: index.php");
+
+                            
+
+                            //$sql = "INSERT INTO profiles (id) SELECT id FROM users WHERE username = '$username'";
+                            
+                            
+                                header("location: index.php");
+                        
+
                         } else{
 
                             $password_err = 'The password you entered was not valid.';

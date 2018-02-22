@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <?php
+Session_start();
 //include config file for database connection
 require_once 'config.php';
+
+if(isset($_SESSION['username'])){
+    echo "welcome '{$_SESSION['username']}'";
+    $username = $_SESSION['username'];
+}
+else {
+    echo "no user set";
+}
 
 $name = $description = "";
 $name_err = $description_err = "";

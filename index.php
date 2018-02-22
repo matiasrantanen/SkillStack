@@ -10,6 +10,15 @@ if (isset($_COOKIE['userid'])){
     header("location: login.php");
     exit;
   }
+  // echo username with welcome
+  if(isset($_SESSION['username'])){
+    echo "welcome '{$_SESSION['username']}'";
+}
+else {
+    echo "no user set";
+}
+
+  
 ?>
 <html lang="en">
 <head>
