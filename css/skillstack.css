@@ -36,3 +36,20 @@ body {
     margin: auto;
     margin-top: 20px;
 }
+/*
+#logout {
+    position: absolute;
+    right: 1;
+}
+*/
+.btn-light {
+    color: white;
+    right: 10px;
+    position: absolute;
+    border: 1px solid white;
+}
+.btn-light:hover {
+    background-color: red;
+    color: white;
+    border: none;
+}
