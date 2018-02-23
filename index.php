@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+require_once 'config.php';
 Session_start();
 
 if (isset($_COOKIE['userid'])){
@@ -12,12 +13,25 @@ if (isset($_COOKIE['userid'])){
   }
   // echo username with welcome
   if(isset($_SESSION['username'])){
-    echo "welcome {$_SESSION['username']}";
+    $username = $_SESSION['username'];
 }
 else {
     echo "no user set";
 }
+//Get user data from table to display on page
+$sqli = "SELECT id, username, description, name FROM users WHERE username = '$username'";
+$result = $link->query($sqli);
 
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $myname = $row["name"];
+        $mydescription = $row["description"];
+    }
+} else {
+    echo "0 results";
+}
+$link->close();
   
 ?>
 <html lang="en">
@@ -63,8 +77,8 @@ else {
     </div>
   <!-- Profile information -->
     <div class="col-8" id="profileinfo">
-      <h3> Name </h3>
-      <p> Write something about yourself! </p>
+      <h3><?php echo $myname;?></h3>
+      <p> <?php echo $mydescription;?> </p>
     </div>
   </div>
 </div>
