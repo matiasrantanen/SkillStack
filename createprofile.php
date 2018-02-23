@@ -5,7 +5,7 @@ Session_start();
 require_once 'config.php';
 
 if(isset($_SESSION['username'])){
-    echo "welcome '{$_SESSION['username']}'";
+    echo "welcome {$_SESSION['username']}";
     $username = $_SESSION['username'];
 }
 else {
@@ -28,9 +28,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $description_err = "Tell us something about yourself!";
 }
 //get input from user and insert into table
-  $name = $_POST['firstname'];
-  $description = $_POST['aboutme'];
-  $sqli = "INSERT INTO users (name,description) VALUES ('$name','$description')";
+  $name = mysqli_real_escape_string($link, $_POST['firstname']);
+  $description = mysqli_real_escape_string($link, $_POST['aboutme']);
+$sqli = "UPDATE users SET name = '$name', description = '$description' WHERE username = '$username'";
   if(mysqli_query($link, $sqli)){
     echo "Table created successfully.";
 } else{

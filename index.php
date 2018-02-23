@@ -12,7 +12,7 @@ if (isset($_COOKIE['userid'])){
   }
   // echo username with welcome
   if(isset($_SESSION['username'])){
-    echo "welcome '{$_SESSION['username']}'";
+    echo "welcome {$_SESSION['username']}";
 }
 else {
     echo "no user set";
