@@ -27,6 +27,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $password = trim($_POST['password']);
     }
 
+    $username = mysqli_real_escape_string($link, $_POST['username']);
+    $password = mysqli_real_escape_string($link, $_POST['password']);
+
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement

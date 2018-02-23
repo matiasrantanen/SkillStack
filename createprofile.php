@@ -30,27 +30,37 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 //get input from user and insert into table
   $name = mysqli_real_escape_string($link, $_POST['firstname']);
   $description = mysqli_real_escape_string($link, $_POST['aboutme']);
-$sqli = "UPDATE users SET name = '$name', description = '$description' WHERE username = '$username'";
-  if(mysqli_query($link, $sqli)){
-    echo "Table created successfully.";
-} else{
-    echo "ERROR: Could not execute $sqli. " . mysqli_error($link);
-}
-  /*creates table with $name to database when submitted
+  
+  //check for empty input before inserting into db
+  if(empty($name_err) && empty($description_err)){
+        
+    // Prepare an insert statement
+    $sqli = "UPDATE users SET name = ? , description = ? WHERE username = ?";
 
-  $name = $_POST['firstname'];
-    $sqli = "CREATE TABLE $name (
-      name VARCHAR(10) NOT NULL,
-      description VARCHAR(255) NOT NULL
-      )";
-      if(mysqli_query($link, $sql)){
-        echo "Table created successfully.";
-    } else{
-        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    if($stmt = mysqli_prepare($link, $sqli)){
+        // Bind variables to the prepared statement as parameters
+        mysqli_stmt_bind_param($stmt, "sss", $param_name, $param_desc, $param_username);
+
+        
+        // Set parameters
+        $param_name = $name;
+        $param_desc = $description;
+        $param_username = $username;
+        
+        // Attempt to execute the prepared statement
+        if(mysqli_stmt_execute($stmt)){
+            // Redirect to profile page
+            header("location: index.php");
+        } else{
+            echo "Something went wrong. Please try again later.";
+        }
     }
-    */
-  
-  
+     
+    // Close statement
+    mysqli_stmt_close($stmt);
+}
+
+// Close connection
 mysqli_close($link);
 }
 ?>
