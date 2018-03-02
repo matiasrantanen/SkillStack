@@ -96,6 +96,10 @@ mysqli_close($link);
 <div class="wrapper" id="profileinfoform">
         <h2>Time to create your SkillStack profile!</h2>
         <p>Please fill this form to create an account.</p>
+        <form method="POST" action="getdata.php" enctype="multipart/form-data">
+            <input type="file" name="myimage">
+            <input type="sendit" name="submit_image" value="Upload">
+            </form>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
                 <label>Your name:<sup>*</sup></label>
@@ -110,22 +114,17 @@ mysqli_close($link);
             <div class="form-group <?php echo (!empty($skills_err)) ? 'has-error' : ''; ?>">
             <label>Add some of your skills!<sup>*</sup></label>
             <ul id="languages">
-                <li>HTML &emsp; 1<input type="radio" name="HTML1" value="1">2<input type="radio" name="HTML2" value="2">3<input type="radio" name="HTML3" value="3">4<input type="radio" name="HTML4" value="4">5<input type="radio" name="HTML5" value="5"></li>
-                <li>CSS &emsp; 1<input type="radio" name="CSS1" value="1">2<input type="radio" name="CSS2" value="2">3<input type="radio" name="CSS3" value="3">4<input type="radio" name="CSS4" value="4">5<input type="radio" name="CSS5" value="5"></li>
-                <li>Javascript &emsp; 1<input type="radio" name="JS1" value="1">2<input type="radio" name="JS2" value="2">3<input type="radio" name="JS3" value="3">4<input type="radio" name="JS4" value="4">5<input type="radio" name="JS5" value="5"></li>
-                <li>Java &emsp; 1<input type="radio" name="JAVA1" value="1">2<input type="radio" name="JAVA2" value="2">3<input type="radio" name="JAVA3" value="3">4<input type="radio" name="JAVA4" value="4">5<input type="radio" name="JAVA5" value="5"></li>
-                <li>NodeJS &emsp; 1<input type="radio" name="NODE1" value="1">2<input type="radio" name="NODE2" value="2">3<input type="radio" name="NODE3" value="3">4<input type="radio" name="NODE4" value="4">5<input type="radio" name="NODE5" value="5"></li>
-                <li>C &emsp; 1<input type="radio" name="C1" value="1">2<input type="radio" name="C2" value="2">3<input type="radio" name="C3" value="3">4<input type="radio" name="C4" value="4">5<input type="radio" name="C5" value="5"></li>
-                <li>C++ &emsp; 1<input type="radio" name="C++1" value="1">2<input type="radio" name="C++2" value="2">3<input type="radio" name="C++3" value="3">4<input type="radio" name="C++4" value="4">5<input type="radio" name="C++5" value="5"></li>
-                <li>SQL &emsp; 1<input type="radio" name="SQL1" value="1">2<input type="radio" name="SQL2" value="2">3<input type="radio" name="SQL3" value="3">4<input type="radio" name="SQL4" value="4">5<input type="radio" name="SQL5" value="5"></li>
+                <li>HTML &emsp; 1<input type="radio" name="HTML" value="1">2<input type="radio" name="HTML" value="2">3<input type="radio" name="HTML" value="3">4<input type="radio" name="HTML" value="4">5<input type="radio" name="HTML" value="5"></li>
+                <li>CSS &emsp; 1<input type="radio" name="CSS" value="1">2<input type="radio" name="CSS" value="2">3<input type="radio" name="CSS" value="3">4<input type="radio" name="CSS" value="4">5<input type="radio" name="CSS" value="5"></li>
+                <li>Javascript &emsp; 1<input type="radio" name="JS" value="1">2<input type="radio" name="JS" value="2">3<input type="radio" name="JS" value="3">4<input type="radio" name="JS" value="4">5<input type="radio" name="JS" value="5"></li>
+                <li>Java &emsp; 1<input type="radio" name="JAVA" value="1">2<input type="radio" name="JAVA" value="2">3<input type="radio" name="JAVA" value="3">4<input type="radio" name="JAVA" value="4">5<input type="radio" name="JAVA" value="5"></li>
+                <li>NodeJS &emsp; 1<input type="radio" name="NODE" value="1">2<input type="radio" name="NODE" value="2">3<input type="radio" name="NODE" value="3">4<input type="radio" name="NODE" value="4">5<input type="radio" name="NODE" value="5"></li>
+                <li>C &emsp; 1<input type="radio" name="C" value="1">2<input type="radio" name="C" value="2">3<input type="radio" name="C" value="3">4<input type="radio" name="C" value="4">5<input type="radio" name="C" value="5"></li>
+                <li>C++ &emsp; 1<input type="radio" name="C++" value="1">2<input type="radio" name="C++" value="2">3<input type="radio" name="C++" value="3">4<input type="radio" name="C++" value="4">5<input type="radio" name="C++" value="5"></li>
+                <li>SQL &emsp; 1<input type="radio" name="SQL" value="1">2<input type="radio" name="SQL" value="2">3<input type="radio" name="SQL" value="3">4<input type="radio" name="SQL" value="4">5<input type="radio" name="SQL" value="5"></li>
                 
             </ul>
-            <form method="POST" action="getdata.php" enctype="multipart/form-data">
-            <input type="file" name="myimage">
-            <input type="submit" name="submit_image" value="Upload">
-            </form>
-
-
+            
             </div>
             
             <div class="form-group">
