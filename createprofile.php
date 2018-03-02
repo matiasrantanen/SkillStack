@@ -96,10 +96,10 @@ mysqli_close($link);
 <div class="wrapper" id="profileinfoform">
         <h2>Time to create your SkillStack profile!</h2>
         <p>Please fill this form to create an account.</p>
-        <form method="POST" action="getdata.php" enctype="multipart/form-data">
-            <input type="file" name="myimage">
-            <input type="sendit" name="submit_image" value="Upload">
-            </form>
+        <form enctype="multipart/form-data"
+        action="getimage.php" method="POST">
+        <input type="file" name="photo"><br>
+        <input type="submit" value="Add">   </form>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
                 <label>Your name:<sup>*</sup></label>
