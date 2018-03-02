@@ -17,13 +17,15 @@ if (isset($_COOKIE['userid'])){
 }
 else {
     echo "no user set";
+    header("location: login.php");
+    exit;
 }
 //Get user data from table to display on page
 $sqli = "SELECT id, username, description, name FROM users WHERE username = '$username'";
 $result = $link->query($sqli);
 
 if ($result->num_rows > 0) {
-    // output data of each row
+    // output data of each row and select data to variables
     while($row = $result->fetch_assoc()) {
         $myname = $row["name"];
         $mydescription = $row["description"];

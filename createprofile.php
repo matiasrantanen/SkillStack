@@ -27,6 +27,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   if(empty(trim($_POST["aboutme"]))){
     $description_err = "Tell us something about yourself!";
 }
+if(empty(trim($_POST["skills"]))){
+    $skills_err = "Add at least 1 skill :)";
+}
 //get input from user and insert into table
   $name = mysqli_real_escape_string($link, $_POST['firstname']);
   $description = mysqli_real_escape_string($link, $_POST['aboutme']);
@@ -103,6 +106,22 @@ mysqli_close($link);
                 <label>Let others know what makes you special!<sup>*</sup></label>
                 <input type="text" name="aboutme" class="form-control" value="<?php echo $description; ?>">
                 <span class="help-block"><?php echo $description_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($skills_err)) ? 'has-error' : ''; ?>">
+            <label>Add some of your skills!<sup>*</sup></label>
+            <select name="languages">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JS">Javascript</option>
+                <option value="JAVA">Java</option>
+                <option value="NodeJS">NodeJS</option>
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="SQL">SQL</option>
+                <input type="submit" class="btn btn-primary" value"Add">
+            </select>
+
+
             </div>
             
             <div class="form-group">
