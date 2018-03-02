@@ -53,3 +53,6 @@ body {
     color: white;
     border: none;
 }
+#languages {
+    list-style-type: none;
+}

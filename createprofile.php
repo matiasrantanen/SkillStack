@@ -109,17 +109,21 @@ mysqli_close($link);
             </div>
             <div class="form-group <?php echo (!empty($skills_err)) ? 'has-error' : ''; ?>">
             <label>Add some of your skills!<sup>*</sup></label>
-            <select name="languages">
-                <option value="HTML">HTML</option>
-                <option value="CSS">CSS</option>
-                <option value="JS">Javascript</option>
-                <option value="JAVA">Java</option>
-                <option value="NodeJS">NodeJS</option>
-                <option value="C">C</option>
-                <option value="C++">C++</option>
-                <option value="SQL">SQL</option>
-                <input type="submit" class="btn btn-primary" value"Add">
-            </select>
+            <ul id="languages">
+                <li>HTML &emsp; 1<input type="radio" name="HTML1" value="1">2<input type="radio" name="HTML2" value="2">3<input type="radio" name="HTML3" value="3">4<input type="radio" name="HTML4" value="4">5<input type="radio" name="HTML5" value="5"></li>
+                <li>CSS &emsp; 1<input type="radio" name="CSS1" value="1">2<input type="radio" name="CSS2" value="2">3<input type="radio" name="CSS3" value="3">4<input type="radio" name="CSS4" value="4">5<input type="radio" name="CSS5" value="5"></li>
+                <li>Javascript &emsp; 1<input type="radio" name="JS1" value="1">2<input type="radio" name="JS2" value="2">3<input type="radio" name="JS3" value="3">4<input type="radio" name="JS4" value="4">5<input type="radio" name="JS5" value="5"></li>
+                <li>Java &emsp; 1<input type="radio" name="JAVA1" value="1">2<input type="radio" name="JAVA2" value="2">3<input type="radio" name="JAVA3" value="3">4<input type="radio" name="JAVA4" value="4">5<input type="radio" name="JAVA5" value="5"></li>
+                <li>NodeJS &emsp; 1<input type="radio" name="NODE1" value="1">2<input type="radio" name="NODE2" value="2">3<input type="radio" name="NODE3" value="3">4<input type="radio" name="NODE4" value="4">5<input type="radio" name="NODE5" value="5"></li>
+                <li>C &emsp; 1<input type="radio" name="C1" value="1">2<input type="radio" name="C2" value="2">3<input type="radio" name="C3" value="3">4<input type="radio" name="C4" value="4">5<input type="radio" name="C5" value="5"></li>
+                <li>C++ &emsp; 1<input type="radio" name="C++1" value="1">2<input type="radio" name="C++2" value="2">3<input type="radio" name="C++3" value="3">4<input type="radio" name="C++4" value="4">5<input type="radio" name="C++5" value="5"></li>
+                <li>SQL &emsp; 1<input type="radio" name="SQL1" value="1">2<input type="radio" name="SQL2" value="2">3<input type="radio" name="SQL3" value="3">4<input type="radio" name="SQL4" value="4">5<input type="radio" name="SQL5" value="5"></li>
+                
+            </ul>
+            <form method="POST" action="getdata.php" enctype="multipart/form-data">
+            <input type="file" name="myimage">
+            <input type="submit" name="submit_image" value="Upload">
+            </form>
 
 
             </div>
