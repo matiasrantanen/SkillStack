@@ -14,9 +14,10 @@ $pic=($_FILES['photo']['name']);
 
 $sqli = "UPDATE users SET picture = '$pic' WHERE username = '$username'";
 if (mysqli_query($link, $sqli)) {
-    echo "jee";
+    header("location: createprofile.php");
 } else {
     echo "Error!!!" . mysqli_error($link);
+    header("location: createprofile.php");
 }
 if(move_uploaded_file($_FILES['photo']['tmp_name'],$target)) 
 
