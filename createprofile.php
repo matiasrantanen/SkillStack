@@ -27,28 +27,42 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   if(empty(trim($_POST["aboutme"]))){
     $description_err = "Tell us something about yourself!";
 }
-if(empty(trim($_POST["skills"]))){
-    $skills_err = "Add at least 1 skill :)";
-}
 //get input from user and insert into table
   $name = mysqli_real_escape_string($link, $_POST['firstname']);
   $description = mysqli_real_escape_string($link, $_POST['aboutme']);
+  $htmlSkill = mysqli_real_escape_string($link, $_POST['htmlSkill']);
+  $cssSkill = mysqli_real_escape_string($link, $_POST['cssSkill']);
+  $jsSkill = mysqli_real_escape_string($link, $_POST['jsSkill']);
+  $javaSkill = mysqli_real_escape_string($link, $_POST['javaSkill']);
+  $nodeSkill = mysqli_real_escape_string($link, $_POST['nodeSkill']);
+  $cSkill = mysqli_real_escape_string($link, $_POST['cSkill']);
+  $cppSkill = mysqli_real_escape_string($link, $_POST['cppSkill']);
+  $sqlSkill = mysqli_real_escape_string($link, $_POST['sqlSkill']);
   
   //check for empty input before inserting into db
   if(empty($name_err) && empty($description_err)){
         
     // Prepare an insert statement
-    $sqli = "UPDATE users SET name = ? , description = ? WHERE username = ?";
+    $sqli = "UPDATE users SET name = ? , description = ?, htmlskill = ?, cssskill = ?, jsskill = ?, javaskill = ?, nodeskill = ?, cskill = ?, cppskill = ?, sqlskill = ? WHERE username = ?";
 
     if($stmt = mysqli_prepare($link, $sqli)){
         // Bind variables to the prepared statement as parameters
-        mysqli_stmt_bind_param($stmt, "sss", $param_name, $param_desc, $param_username);
+        mysqli_stmt_bind_param($stmt, "sssssssssss", $param_name, $param_desc, $param_htmlskill, $param_cssskill, $param_jsskill, $param_javaskill, $param_nodeskill, $param_cskill, $param_cppskill, $param_sqlskill, $param_username);
 
         
         // Set parameters
         $param_name = $name;
         $param_desc = $description;
         $param_username = $username;
+        $param_htmlskill = $htmlSkill;
+        $param_cssskill = $cssSkill;
+        $param_jsskill = $jsSkill;
+        $param_javaskill = $javaSkill;
+        $param_nodeskill = $nodeSkill;
+        $param_cskill = $cSkill;
+        $param_cppskill = $cppSkill;
+        $param_sqlskill = $sqlSkill;
+
         
         // Attempt to execute the prepared statement
         if(mysqli_stmt_execute($stmt)){
@@ -113,15 +127,71 @@ mysqli_close($link);
             </div>
             <div class="form-group <?php echo (!empty($skills_err)) ? 'has-error' : ''; ?>">
             <label>Add some of your skills!<sup>*</sup></label>
-            <ul id="languages">
-                <li>HTML &emsp; 1<input type="radio" name="HTML" value="1">2<input type="radio" name="HTML" value="2">3<input type="radio" name="HTML" value="3">4<input type="radio" name="HTML" value="4">5<input type="radio" name="HTML" value="5"></li>
-                <li>CSS &emsp; 1<input type="radio" name="CSS" value="1">2<input type="radio" name="CSS" value="2">3<input type="radio" name="CSS" value="3">4<input type="radio" name="CSS" value="4">5<input type="radio" name="CSS" value="5"></li>
-                <li>Javascript &emsp; 1<input type="radio" name="JS" value="1">2<input type="radio" name="JS" value="2">3<input type="radio" name="JS" value="3">4<input type="radio" name="JS" value="4">5<input type="radio" name="JS" value="5"></li>
-                <li>Java &emsp; 1<input type="radio" name="JAVA" value="1">2<input type="radio" name="JAVA" value="2">3<input type="radio" name="JAVA" value="3">4<input type="radio" name="JAVA" value="4">5<input type="radio" name="JAVA" value="5"></li>
-                <li>NodeJS &emsp; 1<input type="radio" name="NODE" value="1">2<input type="radio" name="NODE" value="2">3<input type="radio" name="NODE" value="3">4<input type="radio" name="NODE" value="4">5<input type="radio" name="NODE" value="5"></li>
-                <li>C &emsp; 1<input type="radio" name="C" value="1">2<input type="radio" name="C" value="2">3<input type="radio" name="C" value="3">4<input type="radio" name="C" value="4">5<input type="radio" name="C" value="5"></li>
-                <li>C++ &emsp; 1<input type="radio" name="C++" value="1">2<input type="radio" name="C++" value="2">3<input type="radio" name="C++" value="3">4<input type="radio" name="C++" value="4">5<input type="radio" name="C++" value="5"></li>
-                <li>SQL &emsp; 1<input type="radio" name="SQL" value="1">2<input type="radio" name="SQL" value="2">3<input type="radio" name="SQL" value="3">4<input type="radio" name="SQL" value="4">5<input type="radio" name="SQL" value="5"></li>
+            <ul id="skills">
+                <li>HTML <select name="htmlSkill">
+                <option value="">Your skill level</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select></li>
+                <li>CSS <select name="cssSkill">
+                <option value="">Your skill level</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select></li>
+                <li>Javascript <select name="jsSkill">
+                <option value="">Your skill level</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select></li>
+                <li>Java <select name="javaSkill">
+                <option value="">Your skill level</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select></li>
+                <li>NodeJS <select name="nodeSkill">
+                <option value="">Your skill level</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select></li>
+                <li>C <select name="cSkill">
+                <option value="">Your skill level</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select></li>
+                <li>C++ <select name="cppSkill">
+                <option value="">Your skill level</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select></li>
+                <li>SQL <select name="sqlSkill">
+                <option value="">Your skill level</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                </select></li>
                 
             </ul>
             
