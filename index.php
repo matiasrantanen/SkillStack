@@ -21,7 +21,7 @@ else {
     exit;
 }
 //Get user data from table to display on page
-$sqli = "SELECT id, username, description, name FROM users WHERE username = '$username'";
+$sqli = "SELECT id, username, description, name, htmlskill FROM users WHERE username = '$username'";
 $result = $link->query($sqli);
 
 if ($result->num_rows > 0) {
@@ -29,6 +29,8 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $myname = $row["name"];
         $mydescription = $row["description"];
+        $htmlskill = $row["htmlskill"] * 25;
+
     }
 } else {
     echo "0 results";
@@ -89,7 +91,7 @@ $link->close();
   <div class="row" id="p1">
     <div class="col">
       <div class="progress" style="height: 20px;">
-         <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+         <div class="progress-bar" role="progressbar" style="width: <?php echo $htmlskill;?>%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
     </div>
   </div>

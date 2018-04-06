@@ -134,7 +134,6 @@ mysqli_close($link);
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
                 </select></li>
                 <li>CSS <select name="cssSkill">
                 <option value="">Your skill level</option>
@@ -142,7 +141,6 @@ mysqli_close($link);
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
                 </select></li>
                 <li>Javascript <select name="jsSkill">
                 <option value="">Your skill level</option>
@@ -150,7 +148,6 @@ mysqli_close($link);
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
                 </select></li>
                 <li>Java <select name="javaSkill">
                 <option value="">Your skill level</option>
@@ -158,7 +155,6 @@ mysqli_close($link);
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
                 </select></li>
                 <li>NodeJS <select name="nodeSkill">
                 <option value="">Your skill level</option>
@@ -166,7 +162,6 @@ mysqli_close($link);
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
                 </select></li>
                 <li>C <select name="cSkill">
                 <option value="">Your skill level</option>
@@ -174,7 +169,6 @@ mysqli_close($link);
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
                 </select></li>
                 <li>C++ <select name="cppSkill">
                 <option value="">Your skill level</option>
@@ -182,7 +176,6 @@ mysqli_close($link);
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
                 </select></li>
                 <li>SQL <select name="sqlSkill">
                 <option value="">Your skill level</option>
@@ -190,7 +183,6 @@ mysqli_close($link);
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
                 </select></li>
                 
             </ul>
