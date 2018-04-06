@@ -90,6 +90,7 @@ mysqli_close($link);
 <script defer src="js/fontawesome-all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script defer src="js/bootstrap.min.js"></script>
+<script src="js/browse.js"></script>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/skillstack.css">
 </head>
@@ -112,10 +113,14 @@ mysqli_close($link);
         <p>Please fill this form to create an account.</p>
         <form enctype="multipart/form-data"
         action="getimage.php" method="POST">
-        <label class="btn btn-primary btn-file">
-            Browse...
-        <input type="file" style="display:none;" name="photo">
+        <div class="input-group">
+        <label class="input-group-btn">
+        <span class="btn btn-primary">
+            Browse&hellip;
+        <input type="file" style="display:none;" name="photo" multiple>
+        </span>
         </label>
+        </div>
         <br>
         <input type="submit" style="margin-bottom: 10px;" class="btn btn-success" value="Upload picture">   </form>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
