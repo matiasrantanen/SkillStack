@@ -112,8 +112,12 @@ mysqli_close($link);
         <p>Please fill this form to create an account.</p>
         <form enctype="multipart/form-data"
         action="getimage.php" method="POST">
-        <input type="file" name="photo"><br>
-        <input type="submit" value="Upload picture">   </form>
+        <label class="btn btn-primary btn-file">
+            Browse...
+        <input type="file" style="display:none;" name="photo">
+        </label>
+        <br>
+        <input type="submit" style="margin-bottom: 10px;" class="btn btn-success" value="Upload picture">   </form>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
                 <label>Your name:<sup>*</sup></label>
@@ -122,7 +126,7 @@ mysqli_close($link);
             </div>    
             <div class="form-group <?php echo (!empty($description_err)) ? 'has-error' : ''; ?>">
                 <label>Let others know what makes you special!<sup>*</sup></label>
-                <input type="text" name="aboutme" class="form-control" value="<?php echo $description; ?>">
+                <textarea rows="5" type="text" name="aboutme" class="form-control" value="<?php echo $description; ?>"></textarea>
                 <span class="help-block"><?php echo $description_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($skills_err)) ? 'has-error' : ''; ?>">
