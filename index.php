@@ -47,8 +47,8 @@ $link->close();
 ?>
 <html lang="en">
 <head>
-<script defer src="js/fontawesome-all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
 <script defer src="js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/skillstack.css">
@@ -101,7 +101,7 @@ $link->close();
 echo "  
   <div class='row' id='p1'>
   <div class='col' style='margin-top: 30px;'>
-  <h5>HTML</h5><div class='progress' style='height: 20px;'>
+  <i class='fab fa-html5 fa-3x'></i><h5>HTML</h5><div class='progress' style='height: 20px;'>
        <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $htmlskill%;height: 20px' aria-valuenow='$htmlskill' aria-valuemin='0' aria-valuemax='100'>$htmlskill%</div>
     </div>
   </div>
@@ -113,7 +113,7 @@ echo "
     echo "  
       <div class='row' id='p1'>
       <div class='col' style='margin-top: 30px;'>
-      <h5>CSS</h5><div class='progress' style='height: 20px;'>
+      <i class='fab fa-css3 fa-3x'></i><h5>CSS</h5><div class='progress' style='height: 20px;'>
            <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cssskill%;height: 20px;' aria-valuenow='$cssskill' aria-valuemin='0' aria-valuemax='100'>$cssskill%</div>
         </div>
       </div>
@@ -125,7 +125,7 @@ echo "
         echo "  
           <div class='row' id='p1'>
           <div class='col' style='margin-top: 30px;'>
-          <h5>JAVASCRIPT</h5><div class='progress' style='height: 20px;'>
+          <i class='fab fa-js-square fa-3x'></i><h5>JAVASCRIPT</h5><div class='progress' style='height: 20px;'>
                <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $jsskill%;height: 20px;' aria-valuenow='$jsskill' aria-valuemin='0' aria-valuemax='100'>$jsskill%</div>
             </div>
           </div>
@@ -149,7 +149,7 @@ echo "
                 echo "  
                   <div class='row' id='p1'>
                   <div class='col' style='margin-top: 30px;'>
-                  <h5>PHP</h5><div class='progress' style='height: 20px;'>
+                  <i class='fab fa-php fa-3x'></i><h5>PHP</h5><div class='progress' style='height: 20px;'>
                        <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $phpskill%;height: 20px;' aria-valuenow='$phpskill' aria-valuemin='0' aria-valuemax='100'>$phpskill%</div>
                     </div>
                   </div>
