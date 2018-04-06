@@ -113,7 +113,7 @@ mysqli_close($link);
         <form enctype="multipart/form-data"
         action="getimage.php" method="POST">
         <input type="file" name="photo"><br>
-        <input type="submit" value="Add">   </form>
+        <input type="submit" value="Upload picture">   </form>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
                 <label>Your name:<sup>*</sup></label>
