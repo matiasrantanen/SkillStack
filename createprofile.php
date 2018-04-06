@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $cssSkill = mysqli_real_escape_string($link, $_POST['cssSkill']);
   $jsSkill = mysqli_real_escape_string($link, $_POST['jsSkill']);
   $javaSkill = mysqli_real_escape_string($link, $_POST['javaSkill']);
-  $nodeSkill = mysqli_real_escape_string($link, $_POST['nodeSkill']);
+  $phpSkill = mysqli_real_escape_string($link, $_POST['phpSkill']);
   $cSkill = mysqli_real_escape_string($link, $_POST['cSkill']);
   $cppSkill = mysqli_real_escape_string($link, $_POST['cppSkill']);
   $sqlSkill = mysqli_real_escape_string($link, $_POST['sqlSkill']);
@@ -43,11 +43,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   if(empty($name_err) && empty($description_err)){
         
     // Prepare an insert statement
-    $sqli = "UPDATE users SET name = ? , description = ?, htmlskill = ?, cssskill = ?, jsskill = ?, javaskill = ?, nodeskill = ?, cskill = ?, cppskill = ?, sqlskill = ? WHERE username = ?";
+    $sqli = "UPDATE users SET name = ? , description = ?, htmlskill = ?, cssskill = ?, jsskill = ?, javaskill = ?, phpskill = ?, cskill = ?, cppskill = ?, sqlskill = ? WHERE username = ?";
 
     if($stmt = mysqli_prepare($link, $sqli)){
         // Bind variables to the prepared statement as parameters
-        mysqli_stmt_bind_param($stmt, "sssssssssss", $param_name, $param_desc, $param_htmlskill, $param_cssskill, $param_jsskill, $param_javaskill, $param_nodeskill, $param_cskill, $param_cppskill, $param_sqlskill, $param_username);
+        mysqli_stmt_bind_param($stmt, "sssssssssss", $param_name, $param_desc, $param_htmlskill, $param_cssskill, $param_jsskill, $param_javaskill, $param_phpskill, $param_cskill, $param_cppskill, $param_sqlskill, $param_username);
 
         
         // Set parameters
@@ -58,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $param_cssskill = $cssSkill;
         $param_jsskill = $jsSkill;
         $param_javaskill = $javaSkill;
-        $param_nodeskill = $nodeSkill;
+        $param_phpskill = $phpSkill;
         $param_cskill = $cSkill;
         $param_cppskill = $cppSkill;
         $param_sqlskill = $sqlSkill;
@@ -156,7 +156,7 @@ mysqli_close($link);
                 <option value="3">3</option>
                 <option value="4">4</option>
                 </select></li>
-                <li>NodeJS <select name="nodeSkill">
+                <li>PHP <select name="phpSkill">
                 <option value="">Your skill level</option>
                 <option value="1">1</option>
                 <option value="2">2</option>

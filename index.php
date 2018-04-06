@@ -21,7 +21,7 @@ else {
     exit;
 }
 //Get user data from table to display on page
-$sqli = "SELECT id, username, description, name, htmlskill FROM users WHERE username = '$username'";
+$sqli = "SELECT id, username, description, name, htmlskill, cssskill, jsskill, javaskill, phpskill, cskill, cppskill, sqlskill FROM users WHERE username = '$username'";
 $result = $link->query($sqli);
 
 if ($result->num_rows > 0) {
@@ -30,6 +30,13 @@ if ($result->num_rows > 0) {
         $myname = $row["name"];
         $mydescription = $row["description"];
         $htmlskill = $row["htmlskill"] * 25;
+        $cssskill = $row["cssskill"] * 25;
+        $jsskill = $row["jsskill"] * 25;
+        $javaskill = $row["javaskill"] * 25;
+        $phpskill = $row["phpskill"] * 25;
+        $cskill = $row["cskill"] * 25;
+        $cppskill = $row["cppskill"] * 25;
+        $sqlskill = $row["sqlskill"] * 25;
 
     }
 } else {
@@ -88,27 +95,105 @@ $link->close();
 </div>
 <div class="container" id="cont2">
   <h2> Skills </h2>
-  <div class="row" id="p1">
-    <div class="col">
-      <div class="progress" style="height: 20px;">
-         <div class="progress-bar" role="progressbar" style="width: <?php echo $htmlskill;?>%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
+  <?php
+  if ($htmlskill > 0) {
+
+echo "  
+  <div class='row' id='p1'>
+  <div class='col' style='margin-top: 30px;'>
+  <h5>HTML</h5><div class='progress' style='height: 20px;'>
+       <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $htmlskill%;height: 20px' aria-valuenow='$htmlskill' aria-valuemin='0' aria-valuemax='100'>$htmlskill%</div>
     </div>
   </div>
-  <div class="row" id="p2">
-    <div class="col">
-      <div class="progress" style="height: 20px;">
-         <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+";
+  }
+  if ($cssskill > 0) {
+
+    echo "  
+      <div class='row' id='p1'>
+      <div class='col' style='margin-top: 30px;'>
+      <h5>CSS</h5><div class='progress' style='height: 20px;'>
+           <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cssskill%;height: 20px;' aria-valuenow='$cssskill' aria-valuemin='0' aria-valuemax='100'>$cssskill%</div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row" id="p3">
-    <div class="col">
-      <div class="progress" style="height: 20px;">
-         <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div>
-  </div>
+    ";
+      }
+  if ($jsskill > 0) {
+
+        echo "  
+          <div class='row' id='p1'>
+          <div class='col' style='margin-top: 30px;'>
+          <h5>JAVASCRIPT</h5><div class='progress' style='height: 20px;'>
+               <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $jsskill%;height: 20px;' aria-valuenow='$jsskill' aria-valuemin='0' aria-valuemax='100'>$jsskill%</div>
+            </div>
+          </div>
+        </div>
+        ";
+          }
+          if ($javaskill > 0) {
+
+            echo "  
+              <div class='row' id='p1'>
+              <div class='col' style='margin-top: 30px;'>
+              <h5>JAVA</h5><div class='progress' style='height: 20px;'>
+                   <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $javaskill%;height: 20px;' aria-valuenow='$javaskill' aria-valuemin='0' aria-valuemax='100'>$javaskill%</div>
+                </div>
+              </div>
+            </div>
+            ";
+              }
+              if ($phpskill > 0) {
+
+                echo "  
+                  <div class='row' id='p1'>
+                  <div class='col' style='margin-top: 30px;'>
+                  <h5>PHP</h5><div class='progress' style='height: 20px;'>
+                       <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $phpskill%;height: 20px;' aria-valuenow='$phpskill' aria-valuemin='0' aria-valuemax='100'>$phpskill%</div>
+                    </div>
+                  </div>
+                </div>
+                ";
+                  }
+                  if ($cskill > 0) {
+
+                    echo "  
+                      <div class='row' id='p1'>
+                      <div class='col' style='margin-top: 30px;'>
+                      <h5>C</h5><div class='progress' style='height: 20px;'>
+                           <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cskill%;height: 20px;' aria-valuenow='$cskill' aria-valuemin='0' aria-valuemax='100'>$cskill%</div>
+                        </div>
+                      </div>
+                    </div>
+                    ";
+                      }
+                      if ($cppskill > 0) {
+
+                        echo "  
+                          <div class='row' id='p1'>
+                          <div class='col' style='margin-top: 30px;'>
+                          <h5>C++</h5><div class='progress' style='height: 20px;'>
+                               <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cppskill%;height: 20px;' aria-valuenow='$cppskill' aria-valuemin='0' aria-valuemax='100'>$cppskill%</div>
+                            </div>
+                          </div>
+                        </div>
+                        ";
+                          }
+                          if ($sqlskill > 0) {
+
+                            echo "  
+                              <div class='row' id='p1'>
+                              <div class='col' style='margin-top: 30px;'>
+                              <h5>SQL</h5><div class='progress' style='height: 20px;'>
+                                   <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $sqlskill%;height: 20px;' aria-valuenow='$sqlskill' aria-valuemin='0' aria-valuemax='100'>$sqlskill%</div>
+                                </div>
+                              </div>
+                            </div>
+                            ";
+                              }
+      
+  ?>
 </div>
 <div class="container" id="cont3">
   <h2> Projects </h2>
