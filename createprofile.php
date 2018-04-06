@@ -207,7 +207,7 @@ mysqli_close($link);
 <footer class="footer">
   <div class="container" id="foot">
     <div class="row" id=copy>
-      <p id="copy"><i class="far fa-copyright"></i>SkillStack</p>
+    <?php include 'footer.php'; ?>
 </div>
 </div>
 </footer>

@@ -1,0 +1,1 @@
+<?php echo "<p id='copy'><i class='far fa-copyright'></i>SkillStack</p>" ?>
