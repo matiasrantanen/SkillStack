@@ -122,6 +122,7 @@ mysqli_close($link);
         <input type="file" style="display:none;" name="photo" multiple>
         </span>
         </label>
+        <input type="text" class="form-control" readonly>
         </div>
         <br>
         <input type="submit" style="margin-bottom: 10px;" class="btn btn-success" value="Upload picture">   </form>

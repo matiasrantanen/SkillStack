@@ -21,7 +21,7 @@ else {
     exit;
 }
 //Get user data from table to display on page
-$sqli = "SELECT id, username, description, name, htmlskill, cssskill, jsskill, javaskill, phpskill, cskill, cppskill, sqlskill FROM users WHERE username = '$username'";
+$sqli = "SELECT id, username, description, name, htmlskill, cssskill, jsskill, javaskill, phpskill, cskill, cppskill, sqlskill, picture FROM users WHERE username = '$username'";
 $result = $link->query($sqli);
 
 if ($result->num_rows > 0) {
@@ -37,6 +37,7 @@ if ($result->num_rows > 0) {
         $cskill = $row["cskill"] * 25;
         $cppskill = $row["cppskill"] * 25;
         $sqlskill = $row["sqlskill"] * 25;
+        $profilepic = $row["picture"];
 
     }
 } else {
@@ -90,7 +91,10 @@ $link->close();
   <div class="row">
   <!-- Profile picture -->
     <div class="col-4" id="profilepicture">
-     <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
+   <?php
+    echo "
+     <img src='images/$profilepic'> "
+     ?>
     </div>
   <!-- Profile information -->
     <div class="col-8" id="profileinfo">
