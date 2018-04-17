@@ -93,7 +93,7 @@ $link->close();
     <div class="col-4" id="profilepicture">
    <?php
     echo "
-     <img src='images/$profilepic'> "
+     <img src='images/$profilepic' height='250px' width='250px'> "
      ?>
     </div>
   <!-- Profile information -->

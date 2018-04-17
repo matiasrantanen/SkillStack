@@ -5,7 +5,6 @@ require_once 'config.php';
 
 if(isset($_SESSION['username'])){
     $username = $_SESSION['username'];
-    echo "$username";
 }
 
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['deleteAccount']))
@@ -19,8 +18,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['deleteAccount']))
 
         $sqli = "DELETE FROM users WHERE username = '$username'";
         if(mysqli_query($link, $sqli)){
-            
-             header("location: login.php");
+            echo "Account deleted successfully!";
+             header("refresh:5, url=login.php");
         }
       
     }

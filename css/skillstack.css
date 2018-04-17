@@ -6,6 +6,9 @@ body {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+.form-control {
+    height: 38px;
+}
 #cont1 {
     margin: 80px 80px 0px 80px;
 }
@@ -77,4 +80,16 @@ body {
 }
 #delcopy {
     margin: auto;
+}
+#uploadbutton
+{
+    margin-top: -20px;
+}
+#profilepicture img {
+    border-radius: 150px;
+    border: 3px solid #0275d8;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    margin-top: -20px;
+
 }

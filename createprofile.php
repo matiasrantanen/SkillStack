@@ -5,7 +5,6 @@ Session_start();
 require_once 'config.php';
 
 if(isset($_SESSION['username'])){
-    echo "welcome {$_SESSION['username']}";
     $username = $_SESSION['username'];
 }
 else {
@@ -125,7 +124,7 @@ mysqli_close($link);
         <input type="text" class="form-control" readonly>
         </div>
         <br>
-        <input type="submit" style="margin-bottom: 10px;" class="btn btn-success" value="Upload picture">   </form>
+        <input type="submit" style="margin-bottom: 10px;" class="btn btn-success" id="uploadbutton" value="Upload picture">   </form>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
                 <label>Your name:<sup>*</sup></label>
