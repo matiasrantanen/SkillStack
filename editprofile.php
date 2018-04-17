@@ -105,7 +105,9 @@ mysqli_close($link);
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      
+    <li>
+      <a href="deleteprofile.php" class="btn btn-danger" id="deleteprofile" role="button">Delete profile</a>
+      </li>
     </ul>
     
   </div>
