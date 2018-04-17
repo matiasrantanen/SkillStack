@@ -47,11 +47,13 @@ $link->close();
 ?>
 <html lang="en">
 <head>
+<title>SkillStack | Your skills visualized.</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
 <script defer src="js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/skillstack.css">
+<link rel="icon" type="image/ico" href"images/favicon.ico">
 </head>
 <body>
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
@@ -75,7 +77,11 @@ $link->close();
       <li class="nav-item">
         <a class="nav-link" href="#">Contact</a>
       </li>
-      <li><a href="logout.php" class="btn btn-light" id="logout" role="button">Log Out</a>
+      <li>
+      <a href="editprofile.php" class="btn btn-warning" id="editprofile" role="button">Edit profile</a>
+      </li>
+      <li>
+      <a href="logout.php" class="btn btn-light" id="logout" role="button">Log Out</a>
       </li>
     </ul>
   </div>
