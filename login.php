@@ -77,7 +77,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     }
                 } else{
 
-                    $username_err = 'No account found with that username.';
+                    $username_err = 'Invalid username/password, try again!';
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";

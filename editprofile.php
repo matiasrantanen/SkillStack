@@ -111,8 +111,21 @@ mysqli_close($link);
   </div>
 </nav>
 <div class="wrapper" id="profileinfoform">
-        <h2>Time to create your SkillStack profile!</h2>
-        <p>Please fill this form to create an account.</p>
+        <i class="fa fa-cog fa-spin fa-2x"></i><h2>Edit your profile information</h2>
+        <?
+        if (file_exists("profile/$username.php")){
+            echo "<label>Public profile URL: skillstack/profile/$username</label>";
+        } else {
+        echo "<br><form action='profile/generatepublic.php' method='POST'>
+        
+            <label>Click Generate to enable your SkillStack public profile link</label>
+            <input type='submit' class='btn btn-success' value='Generate'>
+            
+        </form><br>";
+        }
+         ?>
+        
+        <label>Choose your profile image:</label>
         <form enctype="multipart/form-data"
         action="editimage.php" method="POST">
         <div class="input-group">

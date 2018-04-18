@@ -1,27 +1,9 @@
 <!DOCTYPE html>
 <?php
-require_once 'config.php';
-Session_start();
+require_once '../config.php';
 
-if (isset($_COOKIE['userid'])){
-    
-  $_SESSION['userid'] = $_COOKIE['userid'];
-  }
-  else  {
-    header("location: login.php");
-    exit;
-  }
-  // echo username with welcome
-  if(isset($_SESSION['username'])){
-    $username = $_SESSION['username'];
-}
-else {
-    echo "no user set";
-    header("location: login.php");
-    exit;
-}
 //Get user data from table to display on page
-$sqli = "SELECT id, username, description, name, htmlskill, cssskill, jsskill, javaskill, phpskill, cskill, cppskill, sqlskill, picture, linkedin, github, codepen FROM users WHERE username = '$username'";
+$sqli = "SELECT * FROM users WHERE username = 'admin'";
 $result = $link->query($sqli);
 
 if ($result->num_rows > 0) {
@@ -56,8 +38,8 @@ $link->close();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
 <script defer src="js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/skillstack.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/skillstack.css">
 <link rel="icon" type="image/ico" href"images/favicon.ico">
 </head>
 <body>
@@ -82,12 +64,6 @@ $link->close();
       <li class="nav-item">
         <a class="nav-link" href="#">Contact</a>
       </li>
-      <li>
-      <a href="editprofile.php" class="btn btn-warning" id="editprofile" role="button">Edit profile</a>
-      </li>
-      <li>
-      <a href="logout.php" class="btn btn-light" id="logout" role="button">Log Out</a>
-      </li>
     </ul>
   </div>
 </nav>
@@ -97,7 +73,7 @@ $link->close();
     <div class="col-4" id="profilepicture">
    <?php
     echo "
-     <img src='$profilepic' height='250px' width='250px'> "
+     <img src='../$profilepic' height='250px' width='250px'> "
      ?>
     </div>
   <!-- Profile information -->
@@ -151,7 +127,7 @@ echo "
             echo "  
               <div class='row' id='p1'>
               <div class='col' style='margin-top: 30px;'>
-              <img src='images/java.png'><h5>JAVA</h5><div class='progress' style='height: 20px;'>
+              <img src='../images/java.png'><h5>JAVA</h5><div class='progress' style='height: 20px;'>
                    <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $javaskill%;height: 20px;' aria-valuenow='$javaskill' aria-valuemin='0' aria-valuemax='100'>$javaskill%</div>
                 </div>
               </div>
@@ -175,7 +151,7 @@ echo "
                     echo "  
                       <div class='row' id='p1'>
                       <div class='col' style='margin-top: 30px;'>
-                      <img src='images/c.svg'><h5>C</h5><div class='progress' style='height: 20px;'>
+                      <img src='../images/c.svg'><h5>C</h5><div class='progress' style='height: 20px;'>
                            <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cskill%;height: 20px;' aria-valuenow='$cskill' aria-valuemin='0' aria-valuemax='100'>$cskill%</div>
                         </div>
                       </div>
@@ -187,7 +163,7 @@ echo "
                         echo "  
                           <div class='row' id='p1'>
                           <div class='col' style='margin-top: 30px;'>
-                          <img src='images/c++.svg'><h5>C++</h5><div class='progress' style='height: 20px;'>
+                          <img src='../images/c++.svg'><h5>C++</h5><div class='progress' style='height: 20px;'>
                                <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cppskill%;height: 20px;' aria-valuenow='$cppskill' aria-valuemin='0' aria-valuemax='100'>$cppskill%</div>
                             </div>
                           </div>
@@ -199,7 +175,7 @@ echo "
                             echo "  
                               <div class='row' id='p1'>
                               <div class='col' style='margin-top: 30px;'>
-                              <img src='images/sql.png'><h5>SQL</h5><div class='progress' style='height: 20px;'>
+                              <img src='../images/sql.png'><h5>SQL</h5><div class='progress' style='height: 20px;'>
                                    <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $sqlskill%;height: 20px;' aria-valuenow='$sqlskill' aria-valuemin='0' aria-valuemax='100'>$sqlskill%</div>
                                 </div>
                               </div>
@@ -242,7 +218,7 @@ echo "
 <footer class="footer">
   <div class="container" id="foot">
     <div class="row" id=copy>
-      <?php include 'footer.php'; ?>
+      <?php include '../footer.php'; ?>
 </div>
 </div>
 </footer>
