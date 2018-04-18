@@ -21,7 +21,7 @@ else {
     exit;
 }
 //Get user data from table to display on page
-$sqli = "SELECT id, username, description, name, htmlskill, cssskill, jsskill, javaskill, phpskill, cskill, cppskill, sqlskill, picture FROM users WHERE username = '$username'";
+$sqli = "SELECT id, username, description, name, htmlskill, cssskill, jsskill, javaskill, phpskill, cskill, cppskill, sqlskill, picture, linkedin, github, codepen FROM users WHERE username = '$username'";
 $result = $link->query($sqli);
 
 if ($result->num_rows > 0) {
@@ -38,6 +38,10 @@ if ($result->num_rows > 0) {
         $cppskill = $row["cppskill"] * 25;
         $sqlskill = $row["sqlskill"] * 25;
         $profilepic = $row["picture"];
+        $linkedin = $row["linkedin"];
+        $github = $row["github"];
+        $codepen = $row["codepen"];
+
 
     }
 } else {
@@ -93,7 +97,7 @@ $link->close();
     <div class="col-4" id="profilepicture">
    <?php
     echo "
-     <img src='images/$profilepic' height='250px' width='250px'> "
+     <img src='$profilepic' height='250px' width='250px'> "
      ?>
     </div>
   <!-- Profile information -->
@@ -224,16 +228,13 @@ echo "
   <h2>Contact</h2>
 
       <ul class="list-unstyled list-inline text-center">
-        <li class="list-inline-item">
-          <a href="#" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
-        </li>
-        <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <li class="list-inline-item"><a href="https://www.linkedin.com/in/<?echo $linkedin?>" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
         </li>
          <li class="list-inline-item">
-          <a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+          <a href="https://github.com/<?echo $github?>" target="_blank"><i class="fab fa-github fa-2x"></i></a>
         </li>
         <li class="list-inline-item">
-          <a href="#" target="_blank"><i class="fab fa-codepen fa-2x"></i></a>
+          <a href="https://codepen.io/<?echo $codepen?>" target="_blank"><i class="fab fa-codepen fa-2x"></i></a>
         </li>
       </ul>
 </div>

@@ -31,6 +31,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 //get input from user and insert into table
   $name = mysqli_real_escape_string($link, $_POST['firstname']);
   $description = mysqli_real_escape_string($link, $_POST['aboutme']);
+  $linkedurl = mysqli_real_escape_string($link, $_POST['linkedin']);
+  $githuburl = mysqli_real_escape_string($link, $_POST['github']);
+  $codepenurl = mysqli_real_escape_string($link, $_POST['codepen']);
   $htmlSkill = mysqli_real_escape_string($link, $_POST['htmlSkill']);
   $cssSkill = mysqli_real_escape_string($link, $_POST['cssSkill']);
   $jsSkill = mysqli_real_escape_string($link, $_POST['jsSkill']);
@@ -44,16 +47,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   if(empty($name_err) && empty($description_err)){
         
     // Prepare an insert statement
-    $sqli = "UPDATE users SET name = ? , description = ?, htmlskill = ?, cssskill = ?, jsskill = ?, javaskill = ?, phpskill = ?, cskill = ?, cppskill = ?, sqlskill = ? WHERE username = ?";
+    $sqli = "UPDATE users SET name = ? , description = ?, htmlskill = ?, cssskill = ?, jsskill = ?, javaskill = ?, phpskill = ?, cskill = ?, cppskill = ?, sqlskill = ?, linkedin = ?, github = ?, codepen = ? WHERE username = ?";
 
     if($stmt = mysqli_prepare($link, $sqli)){
         // Bind variables to the prepared statement as parameters
-        mysqli_stmt_bind_param($stmt, "sssssssssss", $param_name, $param_desc, $param_htmlskill, $param_cssskill, $param_jsskill, $param_javaskill, $param_phpskill, $param_cskill, $param_cppskill, $param_sqlskill, $param_username);
+        mysqli_stmt_bind_param($stmt, "ssssssssssssss", $param_name, $param_desc, $param_htmlskill, $param_cssskill, $param_jsskill, $param_javaskill, $param_phpskill, $param_cskill, $param_cppskill, $param_sqlskill, $param_linkedurl, $param_githuburl, $param_codepenurl, $param_username);
 
         
         // Set parameters
         $param_name = $name;
         $param_desc = $description;
+        $param_linkedurl = $linkedurl;
+        $param_githuburl = $githuburl;
+        $param_codepenurl = $codepenurl;
         $param_username = $username;
         $param_htmlskill = $htmlSkill;
         $param_cssskill = $cssSkill;
@@ -63,6 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $param_cskill = $cSkill;
         $param_cppskill = $cppSkill;
         $param_sqlskill = $sqlSkill;
+
 
         
         // Attempt to execute the prepared statement
@@ -199,7 +206,27 @@ mysqli_close($link);
             </ul>
             
             </div>
-            
+            <div class="form-group">
+                <label>Add your social links here!</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">https://www.linkedin.com/in/</span>
+                    </div>
+                        <input type="text" name="linkedin" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="">
+                    </div>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">https://github.com/</span>
+                    </div>
+                        <input type="text" name="github" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="">
+                    </div>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">https://codepen.io/</span>
+                    </div>
+                        <input type="text" name="codepen" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="">
+                    </div>
+            </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
                 <input type="reset" class="btn btn-default" value="Reset">

@@ -99,7 +99,7 @@ mysqli_close($link);
 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#"><i class="fas fa-th-large"></i> SkillStack</a>
+  <a class="navbar-brand" href="index.php"><i class="fas fa-th-large"></i> SkillStack</a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -114,7 +114,7 @@ mysqli_close($link);
         <h2>Time to create your SkillStack profile!</h2>
         <p>Please fill this form to create an account.</p>
         <form enctype="multipart/form-data"
-        action="getimage.php" method="POST">
+        action="editimage.php" method="POST">
         <div class="input-group">
         <label class="input-group-btn">
         <span class="btn btn-primary">

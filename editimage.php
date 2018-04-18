@@ -9,7 +9,7 @@ if (isset($_SESSION['username'])){
 	//Check if file is uploaded successfully
 	if($_FILES['photo']['error'] > 0) { 
         echo 'Error during file upload, please try again';
-        header("refresh:2; url=createprofile.php"); 
+        header("refresh:2; url=editprofile.php"); 
     }
 	
 	//Define valid filetypes  
@@ -29,13 +29,13 @@ if (isset($_SESSION['username'])){
 	if($result){
         mysqli_query($link, $sqli);
         echo "Image uploaded successfully!";
-        header("refresh:5; url=createprofile.php");
+        header("refresh:5; url=editprofile.php");
         
     }
 		
 	} else { 
         echo 'Only jpg, jpeg and png file formats are allowed. Please try again'; 
-        header ("refresh:3; url=createprofile.php");
+        header ("refresh:3; url=editprofile.php");
     }
 	
 ?>
