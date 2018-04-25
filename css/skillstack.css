@@ -9,6 +9,9 @@ body {
 .form-control {
     height: 38px;
 }
+.col-sm img {
+    border-radius: 10px;
+}
 #cont1 {
     margin: 80px 80px 0px 80px;
     padding-top: 20px;
@@ -32,6 +35,10 @@ body {
 }
 #cont4 {
     margin: 50px 80px 0px 80px;
+}
+#cont4 h2 {
+    text-align: center;
+    padding-bottom: 15px;
 }
 
 #p1 {
