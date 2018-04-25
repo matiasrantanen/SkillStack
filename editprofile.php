@@ -112,7 +112,7 @@ mysqli_close($link);
 </nav>
 <div class="wrapper" id="profileinfoform">
         <i class="fa fa-cog fa-spin fa-2x"></i><h2>Edit your profile information</h2>
-        <?
+        <?php
         if (file_exists("profile/$username.php")){
             echo "<label>Public profile URL: skillstack/profile/$username</label>";
         } else {

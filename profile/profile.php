@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php
 require_once '../config.php';
-
 //Get user data from table to display on page
 $sqli = "SELECT * FROM users WHERE username = '$username'";
 $result = $link->query($sqli);
@@ -37,13 +36,13 @@ $link->close();
 <title>SkillStack | Your skills visualized.</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
-<script defer src="js/bootstrap.min.js"></script>
+<script defer src="../js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/skillstack.css">
-<link rel="icon" type="image/ico" href"images/favicon.ico">
+<link rel="icon" type="image/ico" href"../images/favicon.ico">
 </head>
 <body>
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+<nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-primary navbar-fixed-top">
 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -53,15 +52,15 @@ $link->close();
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Profile<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#cont1">Profile<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Skills</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#cont2">Skills</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Projects</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#cont3">Projects</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>
@@ -185,16 +184,16 @@ echo "
       
   ?>
 </div>
-<div class="container" id="cont3">
+<div class="container-fluid" id="cont3">
   <h2> Projects </h2>
-  <div class="row">
-    <div class="col-4">
+  <div class="row" id="projects">
+    <div class="col-sm">
     <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
     </div>
-    <div class="col-4">
+    <div class="col-sm">
     <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
     </div>
-    <div class="col-4">
+    <div class="col-sm">
     <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
     </div>
   </div>

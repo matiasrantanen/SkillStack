@@ -11,16 +11,24 @@ body {
 }
 #cont1 {
     margin: 80px 80px 0px 80px;
+    padding-top: 20px;
 }
-
+#cont1:target {
+    padding-top: 80px;
+    margin-top: 20px;
+}
 #cont2 {
     width: 90% !important;
     margin-left: auto !important;
     margin-right: auto !important;
 }
-
-#cont3 {
-    margin: 50px 80px 0px 80px;
+#cont2 h2 {
+    margin-left: 13px;
+    margin-top: 20px;
+}
+#cont3 h2 {
+    margin-left: 20px;
+    margin-top: 40px;
 }
 #cont4 {
     margin: 50px 80px 0px 80px;
@@ -85,6 +93,9 @@ body {
 {
     margin-top: -20px;
 }
+#profileinfo {
+    margin-left: -50px;
+}
 #profilepicture img {
     border-radius: 150px;
     border: 3px solid #0275d8;
@@ -92,4 +103,10 @@ body {
     margin-bottom: 30px;
     margin-top: -20px;
 
+}
+#projects {
+    text-align: center;
+}
+.container:target {
+    padding-top: 40px;
 }
