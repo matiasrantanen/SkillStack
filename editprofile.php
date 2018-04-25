@@ -38,16 +38,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $cSkill = mysqli_real_escape_string($link, $_POST['cSkill']);
   $cppSkill = mysqli_real_escape_string($link, $_POST['cppSkill']);
   $sqlSkill = mysqli_real_escape_string($link, $_POST['sqlSkill']);
+  $project1 = mysqli_real_escape_string($link, $_POST['project1']);
+  $project2 = mysqli_real_escape_string($link, $_POST['project2']);
+  $project3 = mysqli_real_escape_string($link, $_POST['project3']);
   
   //check for empty input before inserting into db
   if(empty($name_err) && empty($description_err)){
         
     // Prepare an insert statement
-    $sqli = "UPDATE users SET name = ? , description = ?, htmlskill = ?, cssskill = ?, jsskill = ?, javaskill = ?, phpskill = ?, cskill = ?, cppskill = ?, sqlskill = ? WHERE username = ?";
+    $sqli = "UPDATE users SET name = ? , description = ?, htmlskill = ?, cssskill = ?, jsskill = ?, javaskill = ?, phpskill = ?, cskill = ?, cppskill = ?, sqlskill = ?, p1link = ?, p2link = ?, p3link = ? WHERE username = ?";
 
     if($stmt = mysqli_prepare($link, $sqli)){
         // Bind variables to the prepared statement as parameters
-        mysqli_stmt_bind_param($stmt, "sssssssssss", $param_name, $param_desc, $param_htmlskill, $param_cssskill, $param_jsskill, $param_javaskill, $param_phpskill, $param_cskill, $param_cppskill, $param_sqlskill, $param_username);
+        mysqli_stmt_bind_param($stmt, "ssssssssssssss", $param_name, $param_desc, $param_htmlskill, $param_cssskill, $param_jsskill, $param_javaskill, $param_phpskill, $param_cskill, $param_cppskill, $param_sqlskill, $param_p1link, $param_p2link, $param_p3link, $param_username);
 
         
         // Set parameters
@@ -62,6 +65,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $param_cskill = $cSkill;
         $param_cppskill = $cppSkill;
         $param_sqlskill = $sqlSkill;
+        $param_p1link = $project1;
+        $param_p2link = $project2;
+        $param_p3link = $project3;
+
 
         
         // Attempt to execute the prepared statement
@@ -150,7 +157,7 @@ mysqli_close($link);
                 <textarea rows="5" type="text" name="aboutme" class="form-control" value="<?php echo $description; ?>"></textarea>
                 <span class="help-block"><?php echo $description_err; ?></span>
             </div>
-            <div class="form-group <?php echo (!empty($skills_err)) ? 'has-error' : ''; ?>">
+            <div class="form-group">
             <label>Add some of your skills!<sup>*</sup></label>
             <ul id="skills">
                 <li>HTML <select name="htmlSkill">
@@ -212,6 +219,18 @@ mysqli_close($link);
                 
             </ul>
             
+            </div>
+            <div class="form-group">
+                <label>Here you can add links to your projects</label>
+                <br>
+                <label>Project link 1</label>
+                <input type="text" name="project1" class="form-control" value="">
+                <br>
+                <label>Project link 2</label>
+                <input type="text" name="project2" class="form-control" value="">
+                <br>
+                <label>Project link 3</label>
+                <input type="text" name="project3" class="form-control" value="">
             </div>
             
             <div class="form-group">

@@ -143,7 +143,7 @@ mysqli_close($link);
                 <textarea rows="5" type="text" name="aboutme" class="form-control" value="<?php echo $description; ?>"></textarea>
                 <span class="help-block"><?php echo $description_err; ?></span>
             </div>
-            <div class="form-group <?php echo (!empty($skills_err)) ? 'has-error' : ''; ?>">
+            <div class="form-group">
             <label>Add some of your skills!<sup>*</sup></label>
             <ul id="skills">
                 <li>HTML <select name="htmlSkill">

@@ -22,6 +22,9 @@ if ($result->num_rows > 0) {
         $linkedin = $row["linkedin"];
         $github = $row["github"];
         $codepen = $row["codepen"];
+        $plink1 = $row["p1link"];
+        $plink2 = $row["p2link"];
+        $plink3 = $row["p3link"];
 
 
     }
@@ -59,9 +62,6 @@ $link->close();
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#cont3">Projects</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>
   </div>
@@ -187,14 +187,14 @@ echo "
 <div class="container-fluid" id="cont3">
   <h2> Projects </h2>
   <div class="row" id="projects">
-    <div class="col-sm">
-    <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
+  <div class="col-sm">
+    <a href="<?php echo $plink1;?>" target="_blank"><img src="../images/p1.png"></a>
     </div>
     <div class="col-sm">
-    <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
+    <a href="<?php echo $plink2;?>" target="_blank"><img src="../images/p2.png"></a>
     </div>
     <div class="col-sm">
-    <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x250"></a>
+    <a href="<?php echo $plink3;?>" target="_blank"><img src="../images/p3.png"></a>
     </div>
   </div>
 </div>
