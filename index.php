@@ -117,7 +117,7 @@ echo "
   <div class='row' id='p1'>
   <div class='col' style='margin-top: 30px;'>
   <i class='fab fa-html5 fa-3x'></i><h5>HTML</h5><div class='progress' style='height: 20px;'>
-       <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $htmlskill%;height: 20px' aria-valuenow='$htmlskill' aria-valuemin='0' aria-valuemax='100'>$htmlskill%</div>
+       <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $htmlskill%;height: 20px' aria-valuenow='$htmlskill' aria-valuemin='0' aria-valuemax='100'><div class='progress-title'>$htmlskill%</div></div>
     </div>
   </div>
 </div>
@@ -129,7 +129,7 @@ echo "
       <div class='row' id='p1'>
       <div class='col' style='margin-top: 30px;'>
       <i class='fab fa-css3 fa-3x'></i><h5>CSS</h5><div class='progress' style='height: 20px;'>
-           <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cssskill%;height: 20px;' aria-valuenow='$cssskill' aria-valuemin='0' aria-valuemax='100'>$cssskill%</div>
+           <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cssskill%;height: 20px;' aria-valuenow='$cssskill' aria-valuemin='0' aria-valuemax='100'><div class='progress-title'>$cssskill%</div></div>
         </div>
       </div>
     </div>
@@ -141,7 +141,7 @@ echo "
           <div class='row' id='p1'>
           <div class='col' style='margin-top: 30px;'>
           <i class='fab fa-js-square fa-3x'></i><h5>JAVASCRIPT</h5><div class='progress' style='height: 20px;'>
-               <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $jsskill%;height: 20px;' aria-valuenow='$jsskill' aria-valuemin='0' aria-valuemax='100'>$jsskill%</div>
+               <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $jsskill%;height: 20px;' aria-valuenow='$jsskill' aria-valuemin='0' aria-valuemax='100'><div class='progress-title'>$jsskill%</div></div>
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@ echo "
               <div class='row' id='p1'>
               <div class='col' style='margin-top: 30px;'>
               <img src='images/java.png'><h5>JAVA</h5><div class='progress' style='height: 20px;'>
-                   <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $javaskill%;height: 20px;' aria-valuenow='$javaskill' aria-valuemin='0' aria-valuemax='100'>$javaskill%</div>
+                   <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $javaskill%;height: 20px;' aria-valuenow='$javaskill' aria-valuemin='0' aria-valuemax='100'><div class='progress-title'>$javaskill%</div></div>
                 </div>
               </div>
             </div>
@@ -165,7 +165,7 @@ echo "
                   <div class='row' id='p1'>
                   <div class='col' style='margin-top: 30px;'>
                   <i class='fab fa-php fa-3x'></i><h5>PHP</h5><div class='progress' style='height: 20px;'>
-                       <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $phpskill%;height: 20px;' aria-valuenow='$phpskill' aria-valuemin='0' aria-valuemax='100'>$phpskill%</div>
+                       <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $phpskill%;height: 20px;' aria-valuenow='$phpskill' aria-valuemin='0' aria-valuemax='100'><div class='progress-title'>$phpskill%</div></div>
                     </div>
                   </div>
                 </div>
@@ -177,7 +177,7 @@ echo "
                       <div class='row' id='p1'>
                       <div class='col' style='margin-top: 30px;'>
                       <img src='images/c.svg'><h5>C</h5><div class='progress' style='height: 20px;'>
-                           <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cskill%;height: 20px;' aria-valuenow='$cskill' aria-valuemin='0' aria-valuemax='100'>$cskill%</div>
+                           <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cskill%;height: 20px;' aria-valuenow='$cskill' aria-valuemin='0' aria-valuemax='100'><div class='progress-title'>$cskill%</div></div>
                         </div>
                       </div>
                     </div>
@@ -189,7 +189,7 @@ echo "
                           <div class='row' id='p1'>
                           <div class='col' style='margin-top: 30px;'>
                           <img src='images/c++.svg'><h5>C++</h5><div class='progress' style='height: 20px;'>
-                               <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cppskill%;height: 20px;' aria-valuenow='$cppskill' aria-valuemin='0' aria-valuemax='100'>$cppskill%</div>
+                               <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cppskill%;height: 20px;' aria-valuenow='$cppskill' aria-valuemin='0' aria-valuemax='100'><div class='progress-title'>$cppskill%</div></div>
                             </div>
                           </div>
                         </div>
@@ -201,7 +201,7 @@ echo "
                               <div class='row' id='p1'>
                               <div class='col' style='margin-top: 30px;'>
                               <img src='images/sql.png'><h5>SQL</h5><div class='progress' style='height: 20px;'>
-                                   <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $sqlskill%;height: 20px;' aria-valuenow='$sqlskill' aria-valuemin='0' aria-valuemax='100'>$sqlskill%</div>
+                                   <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $sqlskill%;height: 20px;' aria-valuenow='$sqlskill' aria-valuemin='0' aria-valuemax='100'><div class='progress-title'>$sqlskill%</div></div>
                                 </div>
                               </div>
                             </div>

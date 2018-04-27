@@ -117,3 +117,20 @@ body {
 .container:target {
     padding-top: 40px;
 }
+@media screen and (max-width: 1024px) {
+    
+    #profilepicture img {
+        margin-left: 20px;
+    
+    }
+    .progress-bar.progress-bar-striped.progress-bar-animated {
+        height: 30px !important;
+    }
+    .progress {
+        height: 30px !important;
+        font-size: 1.1rem;
+    }
+    .progress-title {
+        line-height: 30px;
+    }
+}
