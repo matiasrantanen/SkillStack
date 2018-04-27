@@ -16,31 +16,30 @@ A web application for students to track their progress in learning different cod
  
    Run the following statement in MySQL:
 
-
-   <li>CREATE TABLE users ( </li>
-   <li> id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,</li>
-   <li>  username VARCHAR(50) NOT NULL UNIQUE,</li>
-   <li> password VARCHAR(255) NOT NULL,</li>
-   <li> name varchar(32) NULL,</li>
-   <li> description varchar(20000) NULL,</li>
-   <li>  htmlskill int(11) NULL,</li>
-   <li> cssskill int(11) NULL,</li>
-   <li> jsskill int(11) NULL,</li>
-   <li> javaskill int(11) NULL,</li>
-   <li>  phpskill int(11) NULL,</li>
-   <li> cskill int(11) NULL,</li>
-   <li> cppskill int(11) NULL,</li>
-   <li>  sqlskill int(11) NULL,</li>
-   <li> linkedin varchar(255) NULL,</li>
-   <li> github varchar(255) NULL,</li>
-   <li>  codepen varchar(255) NULL,</li>
-   <li>  picture varchar(50) NULL,</li>
-   <li>  p1link varchar(255) NULL,</li>
-   <li>  p2link varchar(255) NULL,</li>
-   <li>  p3link varchar(255) NULL,</li>
-   <li> created_at DATETIME DEFAULT CURRENT_TIMESTAMP</li> 
-   <li>);</li>
-
+   
+   CREATE TABLE users ( <br>
+   INT NOT NULL PRIMARY KEY AUTO_INCREMENT,<br>
+   username VARCHAR(50) NOT NULL UNIQUE,<br>
+   password VARCHAR(255) NOT NULL,<br>
+   name varchar(32) NULL,<br>
+   description varchar(20000) NULL,<br>
+   htmlskill int(11) NULL,<br>
+   cssskill int(11) NULL,<br>
+   jsskill int(11) NULL,<br>
+   javaskill int(11) NULL,<br>
+   phpskill int(11) NULL,<br>
+   cskill int(11) NULL,<br>
+   cppskill int(11) NULL,<br>
+   sqlskill int(11) NULL,<br>
+   linkedin varchar(255) NULL,<br>
+   github varchar(255) NULL,<br>
+   codepen varchar(255) NULL,<br>
+   picture varchar(50) NULL,<br>
+   p1link varchar(255) NULL,<br>
+   p2link varchar(255) NULL,<br>
+   p3link varchar(255) NULL,<br>
+   created_at DATETIME DEFAULT CURRENT_TIMESTAMP<br> 
+   );
 
  3. Launch the application in your web browser through localhost.
 
