@@ -1,6 +1,34 @@
 body {
     background-color: white;
 }
+#profileinfoform{ 
+    width: 500px; 
+    padding: 20px; 
+    margin: auto; 
+    border: 2px solid white; 
+    border-radius: 10px; 
+    background-color: white; 
+    margin-top: 8%; 
+    margin-bottom: 8%; 
+}
+#loginform { 
+    width: 350px;
+    padding: 20px;
+    margin: auto; 
+    margin-top: 10%;
+    border: 2px solid white; 
+    border-radius: 10px; 
+    background-color: white; 
+}
+#registerform {
+    width: 350px;
+    padding: 20px;
+    margin: auto; 
+    margin-top: 10%;
+    border: 2px solid white; 
+    border-radius: 10px; 
+    background-color: white; 
+}
 .container {
     width: 100%;
     margin-left: auto !important;
@@ -21,7 +49,7 @@ body {
     margin-top: 20px;
 }
 #cont2 {
-    width: 90% !important;
+    width: 90%;
     margin-left: auto !important;
     margin-right: auto !important;
 }
@@ -121,7 +149,9 @@ body {
     
     #profilepicture img {
         margin-left: 20px;
-    
+    }
+    #profileinfoform {
+        width: 800px;
     }
     .progress-bar.progress-bar-striped.progress-bar-animated {
         height: 30px !important;
@@ -132,5 +162,84 @@ body {
     }
     .progress-title {
         line-height: 30px;
+    }
+    .col-sm {
+        max-width: 50%;
+        margin-top: 30px;
+    }
+    #cont3 h2 {
+        margin-left: 60px;
+    }
+}
+@media screen and (max-width: 768px) {
+    
+    .collapse.show {
+        height: 160px;
+    }
+    .btn-warning {
+        position: absolute;
+        left: 15px;
+        width: 110px;
+    }
+    .btn-light {
+        left: 130px;
+        width: 100px;
+        border: 1px solid white;
+    }
+    #profileinfo {
+        margin-left: 40px;
+        max-width: 450px;
+    }
+    #profileinfoform {
+        width: 90%;
+    }
+    #profilepicture img {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 425px) {
+    
+    #profilepicture {
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #profilepicture img {
+        margin-left: 0;
+        margin-top: -10px;
+    }
+    #profileinfo {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .col-sm {
+        max-width: 100%;
+    }
+    #cont2 {
+        width: 100%;
+    }
+    #cont3 h2 {
+        margin-left: 30px;
+    }
+}
+@media screen and (max-width: 375px) {
+
+    #cont3 h2 {
+        margin-left: 5px;
+    }
+}
+@media screen and (max-width: 320px) {
+    #cont1, #cont2, #cont3, #cont4, .footer {
+        width: 120%;
+    }
+    .navbar.navbar-toggleable-md.navbar-inverse.bg-primary {
+        width: 120%;
+    }
+    #profileinfoform {
+        width: 120%;
     }
 }

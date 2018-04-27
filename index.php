@@ -57,6 +57,7 @@ $link->close();
 <html lang="en">
 <head>
 <title>SkillStack | Your skills visualized.</title>
+<meta name="viewport" content="width=device-width" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
 <script defer src="js/bootstrap.min.js"></script>

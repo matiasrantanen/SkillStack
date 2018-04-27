@@ -90,9 +90,9 @@ mysqli_close($link);
 ?>
 <html lang="en">
 <head>
+<meta name="viewport" content="width=device-width" />
 <style type="text/css">
         body{ font: 14px sans-serif; background-color: #0275d8;}
-        .wrapper{ width: 500px; padding: 20px; margin: auto; border: 2px solid white; border-radius: 10px; background-color: white; margin-top: 8%; margin-bottom: 8%; }
     </style>
 <script defer src="js/fontawesome-all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
