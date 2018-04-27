@@ -66,12 +66,6 @@ $link->close();
       <li class="nav-item active">
         <a class="nav-link" href="#cont3">Projects</a>
       </li>
-      <li>
-      <a href="editprofile.php" class="btn btn-warning" id="editprofile" role="button">Edit profile</a>
-      </li>
-      <li>
-      <a href="logout.php" class="btn btn-light" id="logout" role="button">Log Out</a>
-      </li>
     </ul>
   </div>
 </nav>
