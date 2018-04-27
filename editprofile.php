@@ -121,7 +121,7 @@ mysqli_close($link);
         <i class="fa fa-cog fa-spin fa-2x"></i><h2>Edit your profile information</h2>
         <?php
         if (file_exists("profile/$username.php")){
-            echo "<label>Public profile URL: skillstack/profile/$username</label>";
+            echo "<label>Public profile URL: <a href='http://1601551.azurewebsites.net/profile/$username.php' target='_blank'>1601551.azurewebsites.net/profile/$username.php</a></label>";
         } else {
         echo "<br><form action='profile/generatepublic.php' method='POST'>
         
@@ -161,56 +161,56 @@ mysqli_close($link);
             <label>Add some of your skills!<sup>*</sup></label>
             <ul id="skills">
                 <li>HTML <select name="htmlSkill">
-                <option value="">Your skill level</option>
+                <option value="0">Your skill level</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 </select></li>
                 <li>CSS <select name="cssSkill">
-                <option value="">Your skill level</option>
+                <option value="0">Your skill level</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 </select></li>
                 <li>Javascript <select name="jsSkill">
-                <option value="">Your skill level</option>
+                <option value="0">Your skill level</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 </select></li>
                 <li>Java <select name="javaSkill">
-                <option value="">Your skill level</option>
+                <option value="0">Your skill level</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 </select></li>
                 <li>PHP <select name="phpSkill">
-                <option value="">Your skill level</option>
+                <option value="0">Your skill level</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 </select></li>
                 <li>C <select name="cSkill">
-                <option value="">Your skill level</option>
+                <option value="0">Your skill level</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 </select></li>
                 <li>C++ <select name="cppSkill">
-                <option value="">Your skill level</option>
+                <option value="0">Your skill level</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 </select></li>
                 <li>SQL <select name="sqlSkill">
-                <option value="">Your skill level</option>
+                <option value="0">Your skill level</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

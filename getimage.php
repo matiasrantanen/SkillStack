@@ -29,13 +29,13 @@ if (isset($_SESSION['username'])){
 	if($result){
         mysqli_query($link, $sqli);
         echo "Image uploaded successfully!";
-        header("refresh:5; url=createprofile.php");
+        header("refresh:1; url=createprofile.php");
         
     }
 		
 	} else { 
         echo 'Only jpg, jpeg and png file formats are allowed. Please try again'; 
-        header ("refresh:3; url=createprofile.php");
+        header ("refresh:2; url=createprofile.php");
     }
 	
 ?>

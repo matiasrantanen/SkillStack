@@ -61,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
 
                             //$sql = "INSERT INTO profiles (id) SELECT id FROM users WHERE username = '$username'";
-                            $sqli = "SELECT id FROM users WHERE name = '' AND username = '$username'";
+                            $sqli = "SELECT id FROM users WHERE name IS NULL AND username = '$username'";
                             $result = $link->query($sqli);
 
                             if ($result->num_rows === 0) {
