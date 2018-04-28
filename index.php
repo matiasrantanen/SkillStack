@@ -189,7 +189,7 @@ echo "
                         echo "  
                           <div class='row' id='p1'>
                           <div class='col' style='margin-top: 30px;'>
-                          <img src='images/c++.svg'><h5>C++</h5><div class='progress' style='height: 20px;'>
+                          <img src='images/cpp.svg'><h5>C++</h5><div class='progress' style='height: 20px;'>
                                <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='width: $cppskill%;height: 20px;' aria-valuenow='$cppskill' aria-valuemin='0' aria-valuemax='100'><div class='progress-title'>$cppskill%</div></div>
                             </div>
                           </div>
