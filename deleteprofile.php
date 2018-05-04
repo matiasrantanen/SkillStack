@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['deleteAccount']))
     function deleteUser()
     {
         $username = $_SESSION['username'];
-        $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        $link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
         $sqli = "DELETE FROM users WHERE username = '$username'";
         if(mysqli_query($link, $sqli)){
